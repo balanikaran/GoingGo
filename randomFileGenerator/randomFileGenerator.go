@@ -29,7 +29,7 @@ func main() {
 
 	fileSize := getFileSizeInBytes(tempFile)
 	// 10000000 == 10 MB
-	for fileSize < 10000000 {
+	for fileSize < 10000000/3 {
 		// fmt.Println(fileSize)
 		if _, err := tempFile.Write(text); err != nil {
 			fmt.Println("Unable to write in file...", err)
